@@ -1,0 +1,28 @@
+{
+    "navbar": { 
+      "home": "الرئيسية",
+      "Product": "المنتجات",
+      "Categories": "التصنيفات",
+      "Brands": "العلامات التجارية",
+      "SignOut": "تسجيل الخروج",
+      "lang": "اللغة"
+    },
+    "cart": {
+      "Add To Cart": "أضف إلى السلة",
+      "Total Price": "إجمالي السعر",
+      "Clear All": "مسح الكل",
+      "Complete the purchase": "إتمام الشراء",
+      "Your Cart is Empty": "سلتك فارغة"
+
+    },
+    "footer": {
+      "Get The App": "احصل على التطبيق",
+      "We Will Send You a Link, Open it on Your Phone to download the app": "سنرسل لك رابطًا، افتحه على هاتفك لتنزيل التطبيق",
+      "Payment partners": "شركاء الدفع",
+      "Get Deliveries": "احصل على توصيلات",
+      "Share App Link": "مشاركة رابط التطبيق"
+    },
+    "home":{
+        "Our Popular Categories": "أشهر تصنيفاتنا"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "navbar": { 
+    "home":"Home",
+    "Product":"Product",
+    "Categories":"Categories",
+    "Brands":"Brands",
+    "SignOut":"SignOut",
+    "lang":"Lang"
+},
+"cart":{
+    "Add To Cart":"Add To Cart",
+    "Total Price":"Total Price",
+    "Clear All":"Clear All",
+    "Complete the purchase":"Complete the purchase",
+    "Your Cart is Empty":"Your Cart is Empty"
+},
+"footer":{
+"Get The App":"Get The App",
+"We Will Send You a Link, Open it on Your Phone to download the app":"We Will Send You a Link, Open it on Your Phone to download the app",
+"Payment partners":"Payment partners",
+"Get Deliveries":"Get Deliveries",
+"Share App Link":"Share App Link"
+},
+"home":{
+"Our Popular Categories":"Our Popular Categories"
+}
+
+}

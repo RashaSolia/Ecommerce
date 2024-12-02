@@ -1,0 +1,25 @@
+
+<div class="container p-5">
+    <section class="bg-main-light rounded-4 shadow p-5 my-2">
+        <form action="" [formGroup]="ordersForm" (ngSubmit)="submitOrder()">
+    
+        <div class="my-2">
+            <label for="details">Details</label>
+            <textarea class="form-control" id="details" formControlName="details"></textarea>
+        </div>
+    
+        
+        <div class="my-2">
+            <label for="phone">Phone</label>
+            <input class="form-control" id="phone" type="tel" formControlName="phone"> 
+        </div>
+    
+        <div class="my-2">
+            <label for="city">City</label>
+            <input class="form-control" id="city" type="tel" formControlName="city"> 
+        </div> 
+        <button class="btn-main" type="submit">Check Out</button>
+    
+        </form>
+    </section>
+</div>

@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="home" >
+        <img src="../../../assets/images/Your paragraph text (2).png" class="w-50 logo" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav ">
+    
+           
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active-link"  routerLink="home">{{"navbar.home" | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active-link"  routerLink="categories"  >{{"navbar.Categories" | translate}}</a>
+          </li>
+            
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active-link"  routerLink="product"  >{{"navbar.Product" | translate}}</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active-link"  routerLink="brands"  >{{"navbar.Brands" | translate}}</a>
+          </li> -->
+        </ul>
+
+        <ul class="navbar-nav  ">
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{"navbar.lang"|translate}}            </a>
+            <ul class="dropdown-menu">
+              <li [class.bg.info]="_TranslateService.currentLang=='en'" (click)="change('en')"><a class="dropdown-item cursor-pointer" >EN</a></li>
+              <li [class.bg.info]="_TranslateService.currentLang=='ar'" (click)="change('ar')"><a class="dropdown-item cursor-pointer" >AR</a></li>
+             </ul>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link position-relative " routerLink="cart" routerLinkActive="active-link"  >   <i class="fa-solid fa-cart-shopping fa-xl"></i>
+              <span class="badge bg-danger fa-10x position-absolute top-0 start-0 ">{{cartIttemsNum}}</span>
+
+            </a>
+
+          </li>
+
+            <li class="nav-item">
+              <a class="nav-link"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><i class="fa-brands fa-linkedin"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link cursor-pointer" (click)="signout()">{{"navbar.SignOut" | translate}}</a>
+              </li>
+          </ul>
+      </div>
+
+    </div>
+  </nav>

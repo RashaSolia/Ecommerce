@@ -1,0 +1,59 @@
+<section class="bg-main-light shadow p-2 my-4 rounded-4 ">
+    <h1 class="h2 text-main">
+        Login Now:
+    </h1>
+    <form  [formGroup]="loginform" (ngSubmit)="loginsubmit()">
+        <div class="my-2">
+            <label for="email">Email</label>
+<input type="email" name="email" id="email" formControlName="email" class="form-control"
+[ngClass]="{'is-valid':!loginform.get('email')?.errors && (loginform.get('email')?.touched || loginform.get('email')?.dirty) ,'is-invalid':loginform.get('email')?.errors && (loginform.get('email')?.touched || loginform.get('email')?.dirty)}">       
+
+        </div>
+
+        @if(loginform.get('email')?.errors && (loginform.get('email')?.touched || loginform.get('email')?.dirty)){
+            <div class="alert alert-danger w-50">
+                @if(loginform.get('email')?.getError('required')){
+                    <p  class="m-0">Email is required .</p>
+
+                }   
+                 @else if(loginform.get('email')?.getError('email')) {
+                    <p  class="m-0">Please enter valid email.</p>
+                }
+                
+            </div>
+        }
+        <div class="my-2">
+            <label for="password">Password</label>
+<input type="password" name="password" id="password" formControlName="password" class="form-control" 
+[ngClass]="{'is-valid':!loginform.get('password')?.errors && (loginform.get('password')?.touched || loginform.get('password')?.dirty) ,'is-invalid':loginform.get('password')?.errors && (loginform.get('password')?.touched || loginform.get('password')?.dirty)}">       
+
+        </div>
+
+        @if(loginform.get('password')?.errors && (loginform.get('password')?.touched || loginform.get('password')?.dirty)){
+            <div class="alert alert-danger w-50">
+                @if(loginform.get('password')?.getError('required')){
+                    <p  class="m-0">Password is required .</p>
+                }
+                @else if(loginform.get('password')?.getError('pattern')){
+                    <p  class="m-0">Password must be at least 6 chars.</p> 
+                }
+            </div>
+        }
+
+        @if(errorMessage){
+            <div class="alert alert-danger w-50 ms-auto">
+                 <p  class="m-0">{{errorMessage}}</p>
+              </div> 
+        }
+
+   
+<div class="d-flex align-items-center justify-content-end gap-4">
+    <a routerLink="/forgetpassword" class="link-primary cursor-pointer " >Forget Password ?</a>
+    <button class="btn-main d-block " type="submit"  [disabled]="loginform.invalid || isloading">Submit
+        @if(isloading){
+            <span><i class="fas fa-spin fa-spinner"></i></span>
+        }
+   </button>
+</div>
+</form>
+</section>
